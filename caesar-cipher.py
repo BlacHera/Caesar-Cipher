@@ -46,3 +46,26 @@ encrypted = encryptMessage("HELLO", 3, doubleAlphabet)
 print(f"Encrypted: {encrypted}")
 decrypted = decryptMessage(encrypted, 3, doubleAlphabet)
 print(f"Decrypted: {decrypted}")  
+
+#Creating a main function
+
+def runCaesarCipherProgram():
+    myAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    print(f'Alphabet: {myAlphabet}')
+    
+    myAlphabet2 = getDoubleAlphabet(myAlphabet)
+    print(f'Alphabet2: {myAlphabet2}')
+    
+    myMessage = getMessage()
+    print(f'Original Message: {myMessage}')
+    
+    myCipherKey = getCipherKey()
+    print(f'Cipher Key: {myCipherKey}')
+    
+    myEncryptedMessage = encryptMessage(myMessage, myCipherKey, myAlphabet2)
+    print(f'Encrypted Message: {myEncryptedMessage}')
+    
+    myDecryptedMessage = decryptMessage(myEncryptedMessage, myCipherKey, myAlphabet2)
+    print(f'Decrypted Message: {myDecryptedMessage}')
+
+    runCaesarCipherProgram()

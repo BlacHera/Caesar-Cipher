@@ -35,3 +35,14 @@ def encryptMessage(message, cipherKey, alphabet):
 alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 doubleAlphabet = getDoubleAlphabet(alphabet)
 print(encryptMessage("HELLO", 3, doubleAlphabet)) 
+
+# Reverse the shift to decrypt the message
+
+def decryptMessage(message, cipherKey, alphabet):
+    decryptKey = -1 * int(cipherKey)  
+    return encryptMessage(message, decryptKey, alphabet)
+
+encrypted = encryptMessage("HELLO", 3, doubleAlphabet)
+print(f"Encrypted: {encrypted}")
+decrypted = decryptMessage(encrypted, 3, doubleAlphabet)
+print(f"Decrypted: {decrypted}")  
